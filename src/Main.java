@@ -26,7 +26,9 @@ public class Main {
         JSONParser parser = new JSONParser();
 
         try {
-            Object data = parser.parse(resp);
+			
+            JSONObject data = (JSONObject) parser.parse(resp);
+			
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
